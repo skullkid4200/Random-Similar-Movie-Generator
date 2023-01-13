@@ -1,3 +1,7 @@
+var searchBtn = document.getElementById("search");
+var searchField = document.getElementById("input");
+var movie;
+
 // YouTube API
 var v1El = document.querySelector('#video-1');
 
@@ -11,8 +15,10 @@ var trailerAPI = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&
 var movieName = "cabin in the woods";
 var movieID = "tt1259521"
 //tmdb
-var movieAPI = `https://api.themoviedb.org/3/movie/550?api_key=32d3014b4c0bf100be1034a9bed533d5`
+var tmdbAPI = `https://api.themoviedb.org/3/movie/550?api_key=32d3014b4c0bf100be1034a9bed533d5`
 //omdb
+var omdbAPI = `http://www.omdbapi.com/?apikey=f9b9102e&t=${movieName}`
+
 
 
 function getVideo1() {
@@ -70,48 +76,33 @@ function displayV1(v1id) {
 //   });
 
 
+// // return a response by searching a movie name
+function searchMovie() {
+  movie = input.value;
+  input.value = "";
 
-// return a response by searching a movie name
-fetch(`http://www.omdbapi.com/?apikey=f9b9102e&t=${movieName}`)
-  .then(response => response.json())
-  .then(json => console.log(json))
-
-//pull out the ID of the movie that was searched, (index 23 in this instance)
-json.forEach((repo) => {
-
-});
+  fetch(`http://www.omdbapi.com/?apikey=f9b9102e&t=${movie}`)
+    .then(response => response.json())
+    .then(json => console.log(json))
+};
 
 
-// return 3 similar movies with movie ID
+// //pull out the ID of the movie that was searched, (index 23 in this instance)
+// // json.forEach((repo) => {
+
+// // });
+
+
+// // return 3 similar movies with movie ID
 fetch(`https://api.themoviedb.org/3/movie/${movieID}/similar?api_key=32d3014b4c0bf100be1034a9bed533d5&language=en-US&page=1&`)
   .then(response => response.json())
   .then(json => console.log(json))
 
+function changePage() {
 
+  document.location.href = "results.html";
 
-// Genres to choose from
-// ==============================
-// Action
-// Adventure
-// Animation
-// Biography
-// Comedy
-// Crime	
-// Documentary
-// Drama
-// Family
-// Fantasy
-// Film Noir
-// History	
-// Horror
-// Music
-// Musical
-// Mystery
-// Romance
-// Sci-Fi	
-// Short Film
-// Sport
-// Superhero
-// Thriller
-// War
-// Western
+}
+
+searchBtn.addEventListener("click", searchMovie, changePage);
+
