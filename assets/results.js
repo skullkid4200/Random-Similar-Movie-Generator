@@ -7,6 +7,8 @@ var v1Url;
 
 var trailerAPI = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&type=video&key=${ytApiKey}&q=${v1Input}_official_trailer`;
 
+<<<<<<< HEAD:assets/results.js
+=======
 
 // // Movie API
 // var movieName = "cabin in the woods";
@@ -14,6 +16,7 @@ var trailerAPI = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&
 // //tmdb
 // var movieAPI = `https://api.themoviedb.org/3/movie/550?api_key=32d3014b4c0bf100be1034a9bed533d5`
 // //omdb
+>>>>>>> main:assets/script.js
 
 
 function getVideo1() {
@@ -38,6 +41,7 @@ function getVideo1() {
     })
 };
 
+
 getVideo1();
 
 
@@ -56,6 +60,12 @@ function displayV1(v1id) {
 };
 
 
+<<<<<<< HEAD:assets/results.js
+// // return 3 similar movies with movie ID
+fetch(`https://api.themoviedb.org/3/movie/${movieID}/similar?api_key=32d3014b4c0bf100be1034a9bed533d5&language=en-US&page=1&`)
+  .then(response => response.json())
+  .then(json => console.log(json))
+=======
 // // MOVIE FUNCTIONS // 
 
 // //load random movie posters on landing page upon opening the website 
@@ -85,9 +95,18 @@ function displayV1(v1id) {
 // fetch(`https://api.themoviedb.org/3/movie/${movieID}/similar?api_key=32d3014b4c0bf100be1034a9bed533d5&language=en-US&page=1&`)
 //   .then(response => response.json())
 //   .then(json => console.log(json))
+>>>>>>> main:assets/script.js
 
+// function changePage() {
 
+//   document.location.href = "file:///C:/Users/Jack/Desktop/BOOTCAMP_WORK/FIRST%20GROUP%20PROJECT/Atomic-Cats-Project-1/results.html";
 
+// }
+
+// searchBtn.addEventListener("click", searchMovie, changePage);
+
+<<<<<<< HEAD:assets/results.js
+=======
 // // Genres to choose from
 // // ==============================
 // // Action
@@ -114,3 +133,4 @@ function displayV1(v1id) {
 // // Thriller
 // // War
 // // Western
+>>>>>>> main:assets/script.js
