@@ -3,6 +3,9 @@ var searchField = document.getElementById("input");
 var movie;
 var movie1ID;
 
+// Input Area has cursor ready for user
+searchField.focus();
+
 // Movie API testing
 var movieName = "cabin in the woods";
 var movieID = "tt1259521"
@@ -11,7 +14,13 @@ var tmdbAPI = `https://api.themoviedb.org/3/movie/550?api_key=32d3014b4c0bf100be
 //omdb
 var omdbAPI = `http://www.omdbapi.com/?apikey=f9b9102e&t=${movieName}`
 
-
+// Enter key event listener 
+// function buttonEnter(event) {
+//   if (event.key === 13) {
+//     event.preventDefault();
+//     searchBtn.click();
+//   }
+// }
 
 function searchMovie() {
   movie = input.value;
@@ -48,6 +57,8 @@ function searchMovie() {
 function changePage() {
   document.location.href = "file:///C:/Users/Jack/Desktop/BOOTCAMP_WORK/FIRST%20GROUP%20PROJECT/Atomic-Cats-Project-1/results.html";
 }
+
+// searchField.addEventListener("keypress", buttonEnter, searchMovie, changePage);
 
 searchBtn.addEventListener("click", searchMovie, changePage);
 

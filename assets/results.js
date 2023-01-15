@@ -15,6 +15,7 @@ var tmdbAPI = `https://api.themoviedb.org/3/movie/${obj}/similar?api_key=${tmdbA
 
 
 
+
 function getSimilarMovies() {
 
   obj = localStorage.getItem('imdbID');
@@ -74,11 +75,6 @@ getSimilarMovies()
 // getVideo1();
 
 
-// function displayV1(v1id) {
-//   // if (!v1id) {
-//   //   v1El.textContent = 'Error: Video Not Found.';
-//   //   return;
-//   // }
 
 //   // console.log(v1id);
 
@@ -87,15 +83,3 @@ getSimilarMovies()
 //     `;
 
 // };
-
-
-
-
-
-
-
-
-
-
-
-
