@@ -55,7 +55,7 @@ function searchMovie() {
 
 
 function changePage() {
-  document.location.href = "file:///C:/Users/Jack/Desktop/BOOTCAMP_WORK/FIRST%20GROUP%20PROJECT/Atomic-Cats-Project-1/results.html";
+  document.location.href = "file:///Users/priyankaagrawal/Desktop/bootcamp/Atomic-Cats-Project-1/results.html";
 }
 
 // searchField.addEventListener("keypress", buttonEnter, searchMovie, changePage);

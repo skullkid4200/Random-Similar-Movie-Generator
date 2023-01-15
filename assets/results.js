@@ -1,5 +1,7 @@
 
 var v1El = document.querySelector('#video-1');
+var refreshButton = document.getElementById("refresh");
+
 
 var v1Input;
 var v2Input;
@@ -12,6 +14,12 @@ var number = Math.trunc(Math.random() * 500) + 1;
 
 var trailerAPI = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&type=video&key=${ytApiKey}&q=${v1Input}_official_trailer`;
 var tmdbAPI = `https://api.themoviedb.org/3/movie/${obj}/similar?api_key=${tmdbApiKey}&language=en-US&page=${number}`;
+
+
+function generateAgainBtn(event) {
+  event.preventDefault();
+  window.location.reload();
+}
 
 
 
@@ -40,7 +48,8 @@ function getSimilarMovies() {
     })
 }
 
-getSimilarMovies()
+getSimilarMovies();
+refreshButton.addEventListener("click", generateAgainBtn);
 
 
 
