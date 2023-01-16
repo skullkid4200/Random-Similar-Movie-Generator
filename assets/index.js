@@ -14,13 +14,6 @@ var tmdbAPI = `https://api.themoviedb.org/3/movie/550?api_key=32d3014b4c0bf100be
 //omdb
 var omdbAPI = `http://www.omdbapi.com/?apikey=f9b9102e&t=${movieName}`
 
-// Enter key event listener 
-// function buttonEnter(event) {
-//   if (event.key === 13) {
-//     event.preventDefault();
-//     searchBtn.click();
-//   }
-// }
 
 function searchMovie() {
   movie = input.value;
@@ -35,7 +28,7 @@ function searchMovie() {
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
-          console.log(data);
+        console.log(data);
 
           var obj = data.imdbID
 
@@ -58,7 +51,6 @@ function changePage() {
   document.location.href = "file:///Users/priyankaagrawal/Desktop/bootcamp/Atomic-Cats-Project-1/results.html";
 }
 
-// searchField.addEventListener("keypress", buttonEnter, searchMovie, changePage);
 
 searchBtn.addEventListener("click", searchMovie, changePage);
 
@@ -73,3 +65,6 @@ searchBtn.addEventListener("click", searchMovie, changePage);
 //
 
 //   });
+
+
+
