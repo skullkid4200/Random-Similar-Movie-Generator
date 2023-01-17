@@ -3,6 +3,7 @@ var searchField = document.getElementById("input");
 var movie;
 var movie1ID;
 
+
 // Input Area has cursor ready for user
 searchField.focus();
 
@@ -48,7 +49,7 @@ function searchMovie() {
 
 
 function changePage() {
-  document.location.href = "file:///Users/priyankaagrawal/Desktop/bootcamp/Atomic-Cats-Project-1/results.html";
+  document.location.href = "https://skullkid4200.github.io/Atomic-Cats-Project-1/results";
 }
 
 

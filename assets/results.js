@@ -88,7 +88,7 @@ function getSimilarMovies() {
 }
 
 function returnHome() {
-  document.location.href = "file:///Users/priyankaagrawal/Desktop/bootcamp/Atomic-Cats-Project-1/index.html";
+  document.location.href = "https://skullkid4200.github.io/Atomic-Cats-Project-1/";
 }
 
 
@@ -173,26 +173,30 @@ function getVideo3() {
 function displayV1(v1id) {
 
   v1El.innerHTML = `
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/${v1id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="responsive-iframe" 
+      src="https://www.youtube.com/embed/${v1id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
     `;
-
 };
 
 function displayV2(v2id) {
 
   v2El.innerHTML = `
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/${v2id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="responsive-iframe" 
+      src="https://www.youtube.com/embed/${v2id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
     `;
-
 };
 
 function displayV3(v3id) {
 
   v3El.innerHTML = `
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/${v3id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="responsive-iframe"
+      src="https://www.youtube.com/embed/${v3id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
     `;
-
 };
+
 
 
 
