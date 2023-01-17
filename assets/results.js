@@ -43,12 +43,10 @@ function generateAgainBtn(event) {
 }
 
 
-
-
 function getSimilarMovies() {
 
   obj = localStorage.getItem('imdbID');
-  console.log(obj);
+  // console.log(obj);
 
   fetch(tmdbAPI, {
     method: 'GET',
@@ -59,7 +57,7 @@ function getSimilarMovies() {
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
-          console.log(data);
+          // console.log(data);
 
           v1Input = data.results[0].title;
           v2Input = data.results[1].title;
@@ -78,10 +76,11 @@ function getSimilarMovies() {
           v3Year.innerHTML = "Release Date: " + data.results[2].release_date;
 
 
-          console.log(v1Input + v2Input + v3Input);
-          getVideo1();
-          getVideo2();
-          getVideo3();
+          // console.log(v1Input + v2Input + v3Input);
+          getVideo1(v1Input);
+          getVideo2(v2Input);
+          getVideo3(v3Input);
+          // getVideos(v1Input, v2Input, v3Input);
         });
       }
     })
@@ -110,12 +109,12 @@ function getVideo1() {
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
-          console.log(data);
+          // console.log(data);
           v1id = data.items[0].id.videoId;
           displayV1(v1id);
         });
       } else {
-        console.log(response);
+        // console.log(response);
         alert('Error: ' + response.statusText);
       }
     })
@@ -134,12 +133,12 @@ function getVideo2() {
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
-          console.log(data);
+          // console.log(data);
           v2id = data.items[0].id.videoId;
           displayV2(v2id);
         });
       } else {
-        console.log(response);
+        // console.log(response);
         alert('Error: ' + response.statusText);
       }
     })
@@ -158,16 +157,17 @@ function getVideo3() {
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
-          console.log(data);
+          // console.log(data);
           v3id = data.items[0].id.videoId;
           displayV3(v3id);
         });
       } else {
-        console.log(response);
+        // console.log(response);
         alert('Error: ' + response.statusText);
       }
     })
 };
+
 
 
 function displayV1(v1id) {
@@ -199,18 +199,9 @@ function displayV3(v3id) {
 
 
 
-
-
-// async function getVideos () {
 //   inputs = [];
 //   inputs.push(v1Input, v2Input, v3Input);
 //   console.log(inputs);
-
-//   // for (let i = 0; i < inputs.length; i++) {
-//   //   trailerUrls = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&type=video&key=${ytApiKey}&q=${inputs[i]}_official_trailer`;
-      
-//   //   console.log(trailerUrls);
-//   // };
 
 //   videoFetch = await Promise.allSettled(
 // 	  inputs.map(async inputs => {
@@ -220,16 +211,15 @@ function displayV3(v3id) {
 //   	})
 //   );
 
-//   await Promise.allSettled(console.log(response));
+//   await Promise.allSettled(console.log(response.json()));
 
-//   // dataObj = await response.json();
+//   v1id = data[0].items[0].id.videoId;
+//   v2id = data[1].items[0].id.videoId;
+//   v3id = data[2].items[0].id.videoId;
+//   console.log(v1id, v2id, v3id);
 
-
-//   // let { id: {videoId} } = trailer.list[0];
-
-//   // var stuff = JSON.stringify(dataObj);
-//   // var data = JSON.parse(dataObj);
-
-//   // v1id = data.items[0].id.videoId;
+//   displayV1(v1id);
+//   displayV2(v2id);
+//   displayV3(v3id);
 
 // };
