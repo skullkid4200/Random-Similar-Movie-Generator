@@ -13,14 +13,14 @@ var movieID = "tt1259521"
 //tmdb
 var tmdbAPI = `https://api.themoviedb.org/3/movie/550?api_key=32d3014b4c0bf100be1034a9bed533d5`
 //omdb
-var omdbAPI = `http://www.omdbapi.com/?apikey=f9b9102e&t=${movieName}`
+var omdbAPI = `https://www.omdbapi.com/?apikey=f9b9102e&t=${movieName}`
 
 
 function searchMovie() {
   movie = input.value;
   input.value = "";
 
-  fetch(`http://www.omdbapi.com/?apikey=f9b9102e&t=${movie}`, {
+  fetch(`https://www.omdbapi.com/?apikey=f9b9102e&t=${movie}`, {
     method: 'GET',
     // mode: 'no-cors',
     credentials: 'same-origin',
