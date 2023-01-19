@@ -8,14 +8,6 @@ It's friday night, the gang's all here, but you can't decide what to watch. The 
 
 No installation required! Just follow the provided link to the website.
 
-## Usage
-
-Website Link: https://skullkid4200.github.io/Atomic-Cats-Project-1/
-
-GitHub Repo Link: https://github.com/skullkid4200/Atomic-Cats-Project-1
-
-![alt text](assets/images/screenshot.png)
-
 ## Credits
 
 Equal Contributors:
@@ -34,3 +26,13 @@ MIT License
 
 Easy to use input box for movie search.
 Helpful navigation buttons to run the search again, or to return to the homepage to search a different movie.
+
+## Usage
+
+Website Link: https://skullkid4200.github.io/Atomic-Cats-Project-1/
+
+GitHub Repo Link: https://github.com/skullkid4200/Atomic-Cats-Project-1
+
+![Homepage](./images/homepage-screenshot.png)
+
+![Results Page](./images/results-pg-screenshot.png)

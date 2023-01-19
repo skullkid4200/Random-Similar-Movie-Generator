@@ -118,4 +118,5 @@ getSimilarMovies();
 
 refreshButton.addEventListener("click", generateAgainBtn);
 
-returnButton.addEventListener("click", returnHome)
+returnButton.addEventListener("click", returnHome);
+
