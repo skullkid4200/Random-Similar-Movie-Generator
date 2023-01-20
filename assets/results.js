@@ -28,8 +28,6 @@ var v3Year = document.getElementById("movie-year-3");
 
 var obj = localStorage.getItem('imdbID');
 
-var obj = localStorage.getItem('imdbID');
-
 var number = Math.trunc(Math.random() * 50) + 1;
 
 var tmdbAPI = `https://api.themoviedb.org/3/movie/${obj}/similar?api_key=${tmdbApiKey}&language=en-US&page=${number}`;
@@ -98,7 +96,7 @@ function getVideo(videoTitle, videoId, videoEl) {
           displayVideo(videoId, videoEl);
         });
       } else {
-        alert('Error: ' + response.statusText);
+        console.log(response);
       }
     })
 };

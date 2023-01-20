@@ -1,13 +1,10 @@
 var searchBtn = document.getElementById("search");
 var searchField = document.getElementById("input");
 var movie;
-var movie1ID;
+var movie1Id;
 
 
 searchField.focus();
-
-
-var tmdbAPI = `https://api.themoviedb.org/3/movie/550?api_key=32d3014b4c0bf100be1034a9bed533d5`
 
 
 function searchMovie() {
@@ -21,20 +18,16 @@ function searchMovie() {
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
-        console.log(data);
 
           var obj = data.imdbID
 
-          console.log(obj)
           localStorage.setItem('imdbID', obj);
           changePage();
         });
       }
-
-
+      
       else {
         console.log(response);
-        alert('Error: ' + response.statusText);
       }
     })
 };
