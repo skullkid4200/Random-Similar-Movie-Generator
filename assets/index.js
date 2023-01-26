@@ -34,7 +34,7 @@ function searchMovie() {
 
 
 function changePage() {
-  document.location.href = "https://skullkid4200.github.io/Atomic-Cats-Project-1/results";
+  document.location.href = "https://skullkid4200.github.io/Random-Similar-Movie-Generator/results";
 }
 
 

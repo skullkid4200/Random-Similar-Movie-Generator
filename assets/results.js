@@ -77,7 +77,7 @@ function getSimilarMovies() {
 
 
 function returnHome() {
-  document.location.href = "https://skullkid4200.github.io/Atomic-Cats-Project-1/";
+  document.location.href = "https://skullkid4200.github.io/Random-Similar-Movie-Generator/";
 }
 
 
